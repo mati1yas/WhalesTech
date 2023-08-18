@@ -32,14 +32,14 @@ class MessageItem extends StatelessWidget {
         ),
       ),
       secondaryBackground: Container(
-        color: Colors.blue,
+        color: Colors.white,
         child: Align(
           alignment: Alignment.centerRight,
           child: Padding(
             padding: const EdgeInsets.only(right: 16.0),
             child: Icon(
               Icons.reply,
-              color: Colors.white,
+              color: Colors.indigo,
             ),
           ),
         ),

@@ -27,8 +27,23 @@ class _MessageComposerState extends State<MessageComposer> {
             return Container(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(repliedMessage.text),
+                  Icon(
+                    Icons.reply,
+                    color: Colors.indigo,
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        repliedMessage.authorName,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.indigo[400]),
+                      ),
+                      Text(repliedMessage.text),
+                    ],
+                  ),
                   IconButton(
                     onPressed: () {
                       chatController.cancelReplying();
